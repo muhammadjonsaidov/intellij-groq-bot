@@ -5,6 +5,8 @@ target/
 
 /temp_audio/
 .env
+.dockerignore
+docker-compose.override.yml
 
 ### IntelliJ IDEA ###
 .idea/modules.xml

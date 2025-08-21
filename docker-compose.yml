@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  groq-bot:
+    build: .
+    container_name: groq-telegram-bot
+    restart: unless-stopped
+    env_file:
+      - ./.env
+    volumes:
+      - ./temp_audio:/app/temp_audio

@@ -3,7 +3,7 @@ package org.example.config;
 import io.github.cdimascio.dotenv.Dotenv;
 
 public class BotConfig {
-    private static final Dotenv dotenv = Dotenv.load();
+    private static final Dotenv dotenv = Dotenv.configure().ignoreIfMissing().load();;
 
     public static final String TELEGRAM_BOT_TOKEN = getEnv("TELEGRAM_BOT_TOKEN");
     public static final String TELEGRAM_BOT_USERNAME = getEnv("TELEGRAM_BOT_USERNAME");
