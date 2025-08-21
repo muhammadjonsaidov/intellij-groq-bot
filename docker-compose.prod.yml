@@ -1,0 +1,9 @@
+services:
+  groq-bot:
+    image: ${ECR_IMAGE_URL}
+    container_name: groq-telegram-bot
+    restart: unless-stopped
+    env_file:
+      - ./.env
+    volumes:
+      - ./temp_audio:/app/temp_audio
